@@ -1,0 +1,33 @@
+#==================  U C F File ===================
+
+# ==== Buttons, Switches ===
+NET "button"    LOC = "V16" | IOSTANDARD = LVTTL | PULLDOWN ;
+NET "switch(0)" LOC = "L13" | IOSTANDARD = LVTTL | PULLUP ;
+NET "switch(1)" LOC = "L14" | IOSTANDARD = LVTTL | PULLUP ;
+NET "switch(2)" LOC = "H18" | IOSTANDARD = LVTTL | PULLUP ;
+NET "switch(3)" LOC = "N17" | IOSTANDARD = LVTTL | PULLUP ;
+
+# ==== Clock ====
+NET "clk_50_MHz" LOC = "C9" | IOSTANDARD = LVCMOS33 ;
+#NET "clk_50_MHz" PERIOD = 20.0ns HIGH 40%;
+
+
+# ==== Character LCD (LCD) ====   F I X ===============
+NET "LCD_E"      LOC = "M18" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW ;
+NET "LCD_RS"     LOC = "L18" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW ;
+NET "LCD_RW"     LOC = "L17" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW ;
+
+# LCD data connections are shared with StrataFlash connections SF_D<15:8>
+NET "SF_D(0)" LOC = "R15" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW ;
+NET "SF_D(1)" LOC = "R16" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW ;
+NET "SF_D(2)" LOC = "P17" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW ;
+NET "SF_D(3)" LOC = "M15" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW ;
+
+NET "LED(7)"   LOC = "F9"  | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+NET "LED(6)"   LOC = "E9"  | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+NET "LED(5)"   LOC = "D11" | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+NET "LED(4)"   LOC = "C11" | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+NET "LED(3)"   LOC = "F11" | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+NET "LED(2)"   LOC = "E11" | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+NET "LED(1)"   LOC = "E12" | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
+NET "LED(0)"   LOC = "F12" | IOSTANDARD = LVCMOS33 | SLEW = FAST | DRIVE = 8;
